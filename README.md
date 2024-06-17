@@ -51,4 +51,9 @@ npm run start
 ```
 
 Make changes to where the frontend is fetching data from e.g
+from  `fetch('https://phase3-project-aw4o.onrender.com/patients')` to `fetch('http://localhost:5555/patients')`
 
+
+# License
+
+Free to use by anyone
