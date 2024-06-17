@@ -9,7 +9,7 @@ function DoctorTable() {
     useEffect(() => {
         async function fetchDoctors() {
             try {
-                await fetch('http://127.0.0.1:5555/staffs')
+                await fetch('https://phase3-project-aw4o.onrender.com/staffs')
                     .then(response => response.json())
                     .then(data => setDoctors(data));
             } catch (error) {

@@ -15,13 +15,13 @@ function AppointmentForm() {
 
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5555/staffs")
+        fetch("https://phase3-project-aw4o.onrender.com/staffs")
             .then((r) => r.json())
             .then(setStaffs);
     }, []);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5555/patients")
+        fetch("https://phase3-project-aw4o.onrender.com/patients")
             .then((r) => r.json())
             .then(setPatients);
     }, []);
@@ -35,7 +35,7 @@ function AppointmentForm() {
             appointment_type,
         };
         try {
-            const response = await fetch('http://127.0.0.1:5555/appointments', {
+            const response = await fetch('https://phase3-project-aw4o.onrender.com/appointments', {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {

@@ -13,7 +13,7 @@ function AppointmentTable() {
     useEffect(() => {
         async function fetchData() {
             try {
-                await fetch(`http://127.0.0.1:5555/appointments/${id}`)
+                await fetch(`https://phase3-project-aw4o.onrender.com/appointments/${id}`)
                     .then(response => response.json())
                     .then(data => setAppointments(data));
             } catch (error) {

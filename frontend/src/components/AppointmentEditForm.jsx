@@ -12,7 +12,7 @@ function AppointmentEditForm() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(`http://127.0.0.1:5555/appointments/${id}`);
+                const response = await fetch(`https://phase3-project-aw4o.onrender.com/appointments/${id}`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -28,7 +28,7 @@ function AppointmentEditForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://127.0.0.1:5555/appointments/${appointment.id}`, {
+        fetch(`https://phase3-project-aw4o.onrender.com/appointments/${appointment.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +38,7 @@ function AppointmentEditForm() {
             }),
         }).then((r) => {
             if (r.ok) {
-                history.push(`http://127.0.0.1:5555/appointments`);
+                history.push(`https://phase3-project-aw4o.onrender.com/appointments`);
                 alert("Successfully updated appointment!");
                 return r.json();
             } else {

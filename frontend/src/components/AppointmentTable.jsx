@@ -9,7 +9,7 @@ function AppointmentTable() {
     useEffect(() => {
         async function fetchData() {
             try {
-                await fetch('http://127.0.0.1:5555/appointments')
+                await fetch('https://phase3-project-aw4o.onrender.com/appointments')
                     .then(response => response.json())
                     .then(data => setAppointments(data));
             } catch (error) {
@@ -21,7 +21,7 @@ function AppointmentTable() {
     // console.log(appointments)
 
     function handleDelete(id) {
-        fetch(`http://127.0.0.1:5555/appointments/${id}`, {
+        fetch( `https://phase3-project-aw4o.onrender.com/appointments/${id}`, {
             method: "DELETE",
         }).then((r) => {
             if (r.ok) {
